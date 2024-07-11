@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+:root{
+    --cor1: #373A40;
+    --cor2: #EEEEEE;
+    --cor3: #DC5F00;
+    --cor4: #272727;
+    --font-text: 'Montserrat', sans-serif;
+    --font-title: 'Krona One', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor1);
+    color: var(--cor2);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu__link:hover{
+    color: var(--cor2);
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px
+}
+
+.cabecalho__menu__link{
+    font-family: var(--font-text);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color:var(--cor3);
+    text-decoration: none;
+}
+
+.titulo-destaque{
+    color: var(--cor3);
+}
+
+.apresentacao{
+    padding: 7% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5.10rem;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 1.6rem;
+    font-family: var(--font-title);
+    color: var(--cor2);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--font-title); 
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.apresentacao__links__navegacao{
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor3);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.37rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor2);
+    font-family: var(--font-text);
+}
+
+.apresentacao__links__link:hover{
+    background-color: var(--cor4);
+    cursor: pointer;
+}
+
+.apresentacao__conteudo__certificado{
+    text-decoration: none;
+    color: var(--cor3);
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    background-color: var(--cor3);
+    font-family: var(--font-text);
+    color: var(--cor1);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;  
+    padding: 1rem;
+}
+
+/* 
+Media Queria, usado para aplicar uma condição no CSS
+e executar um código. Exemplo, no caso, se a tela tiver
+mais que 1200px, ele vai mudar a disposição dos elementos
+do MAIN. */
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        gap: 81px;
+        padding: 5%;
+    }
+    
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
